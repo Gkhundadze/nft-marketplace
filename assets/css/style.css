@@ -1,0 +1,80 @@
+:root {
+    /* typography */
+    --heading-1: 67px;
+    --heading-2: 51px;
+    --heading-3: 38px;
+    --heading-4: 28px;
+    --heading-5: 22px;
+    --base: 16px;
+    --caption: 12px;
+    --cta: #A259FF;
+
+    /* colors */
+    --dark-500: #2B2B2B;
+    --dark-300: #3B3B3B;
+    --light-500: #858584;
+    --light-300: #fff;
+
+    /*  */
+    --primary-radius: 20px;
+}
+
+body {
+    background-color: var(--dark-500);
+}
+
+/* utility classes START */
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+/* utility classes END */
+
+header {
+    padding: 20px 50px;
+    color: var(--light-300);
+
+    a.logo {
+        img {}
+    }
+
+    nav {
+        ul {
+            gap: 10px;
+
+            li {
+                a {
+                    display: inline-block;
+                    color: inherit;
+                    font-size: var(--base);
+                    padding: 12px 20px;
+                    text-transform: capitalize;
+                }
+
+                &.sign-up {
+                    background-color: var(--cta);
+                    border-radius: var(--primary-radius);
+
+                    a {
+                        gap: 12px;
+                        padding: 20px 30px;
+                    }
+                }
+            }
+        }
+    }
+}
