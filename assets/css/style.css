@@ -23,11 +23,25 @@ body {
     background-color: var(--dark-500);
 }
 
+section{
+    
+padding-block: 80px;
+
+}
+
 /* utility classes START */
 .container {
     max-width: 1050px;
     margin: 0 auto;
     width: 90%;
+}
+
+.bold-700{
+    font-weight: 700;
+}
+
+.capitalize{
+    text-transform: capitalize;
 }
 
 .d-flex {
@@ -44,6 +58,11 @@ body {
 .align-center {
     align-items: center;
 }
+.gap-30{
+    gap: 30px;
+}
+
+
 
 /* utility classes END */
 
@@ -111,7 +130,10 @@ section.hero{
             }
 
         }
-        h1,p,a{
+        ul.statistics-wrapper{
+            
+        }
+        >h1,>p,>a{
             margin-bottom: 30px;
         }
 
