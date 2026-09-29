@@ -23,11 +23,7 @@ body {
     background-color: var(--dark-500);
 }
 
-section{
-    
-padding-block: 80px;
 
-}
 
 /* utility classes START */
 .container {
@@ -39,6 +35,10 @@ padding-block: 80px;
 .bold-700{
     font-weight: 700;
 }
+.bold-600{
+    font-weight: 600;
+}
+
 
 .capitalize{
     text-transform: capitalize;
@@ -67,6 +67,10 @@ padding-block: 80px;
 }
 .lh-140{
     line-height:140%;
+}
+
+.lh-120{
+    line-height: 120%;
 }
 
 
@@ -106,6 +110,74 @@ header {
             }
         }
     }
+}
+
+section{
+    color: var(--light-300);
+    padding-block: 80px;
+    header{
+        padding: 0;
+        color: inherit;
+        margin-bottom: 60px;
+        div{
+            h2{
+                font-size: var(--heading-3);
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: var(--heading-5)
+            }
+        }
+    }
+
+    .wrapper{
+        article.card{
+            width: 330px;
+
+            .preview{
+                img{
+                    width: 100%;
+                    border-radius: var(--primary-radius);
+                }
+                .thumbnails{
+                    gap: 15px;
+                    margin-block: 15px
+                    ;
+                    img{
+                        width: 100px;
+                        border-radius: var(--primary-radius);
+                    }
+
+                    a{
+                        padding: 2rem 1rem;
+                        background-color: var(--cta);
+                        color: inherit;
+                        font-size: var(--heading-5);
+                        border-radius: var(--primary-radius);
+                    }
+
+                }
+            }
+            .footer{
+                h3{
+                    font-size: var(--heading-5);
+                    margin-bottom: 10px;
+                }
+                .author-wrapper{
+                    gap: 10px;
+                    img{
+                        width: 24px;
+                        border-radius: 50%;
+
+                    }
+                    h4{
+
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 
@@ -182,6 +254,7 @@ section.hero{
 
     }
 }
+
 
 
 
