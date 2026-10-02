@@ -58,6 +58,15 @@ body {
 .align-center {
     align-items: center;
 }
+
+.d-column{
+    flex-direction: column;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
 .gap-30{
     gap: 30px;
 }
@@ -71,6 +80,18 @@ body {
 
 .lh-120{
     line-height: 120%;
+}
+
+.bg-cta{
+    background-color: var(--cta);
+}
+
+.bg-transparent{
+    background-color: transparent;
+}
+
+.border-cta{
+    border: 2px solid var(--cta);
 }
 
 
@@ -128,59 +149,32 @@ section{
                 font-size: var(--heading-5)
             }
         }
+        a{
+            align-self: flex-end;
+        }
     }
 
     .wrapper{
-        article.card{
-            width: 330px;
+       h3{
 
-            .preview{
-                img{
-                    width: 100%;
-                    border-radius: var(--primary-radius);
-                }
-                .thumbnails{
-                    gap: 15px;
-                    margin-block: 15px
-                    ;
-                    img{
-                        width: 100px;
-                        border-radius: var(--primary-radius);
-                    }
+         font-size: var(--heading-5);
 
-                    a{
-                        padding: 2rem 1rem;
-                        background-color: var(--cta);
-                        color: inherit;
-                        font-size: var(--heading-5);
-                        border-radius: var(--primary-radius);
-                    }
-
-                }
-            }
-            .footer{
-                h3{
-                    font-size: var(--heading-5);
-                    margin-bottom: 10px;
-                }
-                .author-wrapper{
-                    gap: 10px;
-                    img{
-                        width: 24px;
-                        border-radius: 50%;
-
-                    }
-                    h4{
-
-                    }
-                }
-            }
         }
     }
 
 }
 
-
+.btn{
+    border-radius: var(--primary-radius);
+            /* background-color: var(--cta); */
+    gap: 12px;
+    color:inherit;
+    font-weight: 600;
+    font-size: var(--base);
+    &.secondary{
+        padding: 20px 50px;
+    }
+}
 
 section.hero{
     color: var(--light-300);
@@ -196,13 +190,13 @@ section.hero{
         }
         a{
             
-            border-radius: var(--primary-radius);
+            /* border-radius: var(--primary-radius);
             padding: 20px 50px;
             background-color: var(--cta);
             gap: 12px;
             color:inherit;
             font-weight: 600;
-            font-size: var(--base);
+            font-size: var(--base); */
             img{
 
             }
@@ -253,6 +247,89 @@ section.hero{
 
 
     }
+}
+
+
+section.trending-collections{
+    .wrapper{
+         article.card{
+            width: 330px;
+
+            .preview{
+                img{
+                    width: 100%;
+                    border-radius: var(--primary-radius);
+                }
+                .thumbnails{
+                    gap: 15px;
+                    margin-block: 15px
+                    ;
+                    img{
+                        width: 100px;
+                        border-radius: var(--primary-radius);
+                    }
+
+                    a{
+                        padding: 2rem 1rem;
+                        background-color: var(--cta);
+                        color: inherit;
+                        font-size: var(--heading-5);
+                        border-radius: var(--primary-radius);
+                    }
+
+                }
+            }
+            .footer{
+                /* h3{
+                    font-size: var(--heading-5);
+                } */
+                .author-wrapper{
+                    margin-top: 10px;
+                    gap: 10px;
+                    img{
+                        width: 24px;
+                        border-radius: 50%;
+
+                    }
+                    h4{
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+section.top-creators{
+    .wrapper{
+        article.author-card{
+            padding: 20px;
+            border-radius: var(--primary-radius);
+            background-color: var(--dark-300);
+            width: 240px;
+
+            img{
+                
+            }
+            h3{
+                margin-block: 20px 5px;
+            }
+            div{
+                font-size: var(--base);
+                p{
+                    color: var(--light-500);
+                    &:last-child{
+                        color: var(--light-300);
+                        span{
+                            margin-inline: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    
 }
 
 
