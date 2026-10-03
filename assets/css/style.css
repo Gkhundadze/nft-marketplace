@@ -54,7 +54,9 @@ body {
 .justify-between {
     justify-content: space-between;
 }
-
+.justify-center{
+    justify-content: center;
+}
 .align-center {
     align-items: center;
 }
@@ -303,11 +305,22 @@ section.trending-collections{
 section.top-creators{
     .wrapper{
         article.author-card{
+            position: relative;
             padding: 20px;
             border-radius: var(--primary-radius);
             background-color: var(--dark-300);
             width: 240px;
-
+            .order{
+                width: 30px;
+                height: 30px;
+                background-color: var(--dark-500);
+                color:var(--light-500);
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                border-radius: 50%;
+                
+            }
             img{
                 
             }
@@ -322,6 +335,7 @@ section.top-creators{
                         color: var(--light-300);
                         span{
                             margin-inline: 10px;
+
                         }
                     }
                 }
