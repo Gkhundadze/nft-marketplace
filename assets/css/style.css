@@ -346,6 +346,42 @@ section.top-creators{
     
 }
 
+section.categories{
+    .wrapper{
+        a.category-card{
+            width: 240px;
+            
+            .preview{
+                position: relative;
+                height: 240px;
+                img{
+                    transition-duration: 0.3s;
+                    &.icon{
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform:translate(-50%,-50%);
+                        z-index:2;
+                    }
+                }
+            }
+            h3{
+                padding: 20px 30px;
+                font-size: var(--heading-5);
+                color: var(--light-300);
+                background-color: var(--dark-300);
+                border-radius:0 0 var(--primary-radius) var(--primary-radius);
+            }
+            &:hover{
+                img{
+                    &:not(.icon){
+                        filter:blur(4px);
+                    }
+                }
+            }
+        }
+    }    
+}
 
 
 
