@@ -382,7 +382,34 @@ section.categories{
         }
     }    
 }
-
+section.discover{
+    .wrapper{
+        article.nft-card{
+            width: 330px;
+            .preview{
+                img{
+                    display: block;
+                    width: 100%;
+                }
+            }
+            .footer{
+                padding: 20px 30px;
+                background-color: var(--dark-300);
+                border-radius: 0 0 var(--primary-radius) var(--primary-radius);
+                .price-wrapper{
+                    margin-top: 25px;
+                    p:first-child{
+                        font-size: 12px;
+                        color: var(--light-500);
+                        line-height: 110%;
+                        margin-bottom: 8px;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
 
 
 
