@@ -87,6 +87,9 @@ body {
 .bg-cta{
     background-color: var(--cta);
 }
+.bg-light-300{
+    background-color: var(--light-300);
+}
 
 .bg-transparent{
     background-color: transparent;
@@ -174,7 +177,12 @@ section{
     font-weight: 600;
     font-size: var(--base);
     &.secondary{
+        
         padding: 20px 50px;
+    }
+    &.bg-light-300{
+        color: var(--dark-500);
+
     }
 }
 
@@ -413,4 +421,36 @@ section.discover{
 
 
 
-    
+section.auction{
+    background-image: url(../images/magic-mushrooms-cover.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 640px;
+    background-position: center;
+    .content-wrapper {
+        .author-wrapper{
+            
+            gap: 12px;
+            padding: 10px 20px;
+            border-radius: var(--primary-radius);
+            background-color: var(--dark-500);
+            img{
+                width: 24px;
+                border-radius: 50%;
+                
+            }
+
+        }
+        h2{
+            margin-block: 30px;
+            font-size: var(--heading-2);
+            color: var(--light-300);
+            line-height: 110%;
+            
+        }
+    }
+    .countdown-wrapper{
+
+
+    }       
+}
