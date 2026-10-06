@@ -533,3 +533,28 @@ section.auction {
         }
     }
 }
+
+section.how-it-works{
+    .wrapper{
+        article{
+            
+            width: 330px;
+            padding: 30px;
+            border-radius: var(--primary-radius);
+            background-color: var(--dark-300);
+            text-align: center;
+            img{
+                
+            }
+            h3{
+                margin-block: 20px 10px;
+                
+                font-size: var(--heading-5);
+            }
+            p{
+
+            }
+
+        }
+    }
+}
