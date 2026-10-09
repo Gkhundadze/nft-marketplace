@@ -45,6 +45,10 @@ body {
     text-transform: capitalize;
 }
 
+.d-block{
+    display: block;
+}
+
 .d-flex {
     display: flex;
 }
@@ -598,5 +602,36 @@ section.join-digest{
 
     }
     
+
+}
+
+footer{
+    background-color: var(--dark-300);
+    margin-top: 80px;
+    padding-block: 40px;
+    font-size: var(--base);
+    color: var(--light-500);
+
+    .logo,h2{
+        margin-bottom: 30px;
+    }
+
+    p{
+        margin-bottom: 20px;
+    }
+    h5{
+        margin-bottom: 15px;
+    }
+
+    .socials-wrapper{
+        gap: 10px;
+
+    }
+
+    h2{
+        font-size: var(--heading-5);
+        color: var(--light-300);
+    }
+
 
 }
