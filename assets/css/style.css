@@ -558,3 +558,45 @@ section.how-it-works{
         }
     }
 }
+section.join-digest{
+
+    background-color: var(--dark-300);
+    border-radius: var(--primary-radius);
+    padding: 60px;
+    gap: 80px;
+   
+    >img{
+
+
+    }
+    .content{
+        max-width: 425px;
+        h2{
+            font-size: var(--heading-3);
+
+        }
+        p{
+            font-size: var(--heading-5);
+            margin-block: 10px 40px;
+        }
+        form{
+           
+            input{
+                padding: 20px;
+                border-radius: var(--primary-radius);
+                font-size: var(--base);
+                /* width: 325px; */
+                flex-grow: 1; /* */
+            }
+            a{
+                position: relative;
+                left: -30px;
+
+            }
+           
+        }
+
+    }
+    
+
+}
