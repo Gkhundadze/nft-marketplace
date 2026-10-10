@@ -45,7 +45,7 @@ body {
     text-transform: capitalize;
 }
 
-.d-block{
+.d-block {
     display: block;
 }
 
@@ -69,7 +69,7 @@ body {
     align-items: center;
 }
 
-.align-end{
+.align-end {
     align-items: flex-end;
 }
 
@@ -470,6 +470,7 @@ section.discover {
 
 
 section.auction {
+    position: relative;
     background-image: url(../images/magic-mushrooms-cover.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -477,6 +478,8 @@ section.auction {
     background-position: center;
 
     .content-wrapper {
+        z-index: 2;
+
         .author-wrapper {
 
             gap: 12px;
@@ -502,7 +505,7 @@ section.auction {
     }
 
     .countdown-wrapper {
-
+        z-index: 2;
         background-color: rgba(59, 59, 59, 50%);
         padding: 30px;
         border-radius: var(--primary-radius);
@@ -536,102 +539,163 @@ section.auction {
             }
         }
     }
+
+    &::before {
+        content: '';
+        display: block;
+        background: linear-gradient(#a159ff00, #A259FF);
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+    }
 }
 
-section.how-it-works{
-    .wrapper{
-        article{
-            
+section.how-it-works {
+    .wrapper {
+        article {
+
             width: 330px;
             padding: 30px;
             border-radius: var(--primary-radius);
             background-color: var(--dark-300);
             text-align: center;
-            img{
-                
-            }
-            h3{
+
+            img {}
+
+            h3 {
                 margin-block: 20px 10px;
-                
+
                 font-size: var(--heading-5);
             }
-            p{
 
-            }
+            p {}
 
         }
     }
 }
-section.join-digest{
+
+section.join-digest {
 
     background-color: var(--dark-300);
     border-radius: var(--primary-radius);
     padding: 60px;
     gap: 80px;
-   
-    >img{
 
+    >img {}
 
-    }
-    .content{
+    .content {
         max-width: 425px;
-        h2{
-            font-size: var(--heading-3);
 
+        h2 {
+            font-size: var(--heading-3);
         }
-        p{
+
+        p {
             font-size: var(--heading-5);
             margin-block: 10px 40px;
         }
-        form{
-           
-            input{
+
+        form {
+            input {
                 padding: 20px;
                 border-radius: var(--primary-radius);
                 font-size: var(--base);
                 /* width: 325px; */
-                flex-grow: 1; /* */
+                flex-grow: 1;
+                /* */
             }
-            a{
+
+            a {
                 position: relative;
                 left: -30px;
-
             }
-           
         }
-
     }
-    
+
 
 }
 
-footer{
+footer {
+    --footer-color: #CCCCCC;
     background-color: var(--dark-300);
     margin-top: 80px;
     padding-block: 40px;
     font-size: var(--base);
-    color: var(--light-500);
+    color: var(--footer-color);
 
-    .logo,h2{
+    .logo,
+    h2 {
         margin-bottom: 30px;
     }
 
-    p{
+    p {
         margin-bottom: 20px;
     }
-    h5{
+
+    h5 {
         margin-bottom: 15px;
     }
 
-    .socials-wrapper{
+    .socials-wrapper {
         gap: 10px;
 
     }
 
-    h2{
+    h2 {
         font-size: var(--heading-5);
         color: var(--light-300);
     }
 
+    li {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: currentColor;
+        }
+    }
+
+    .wrapper {
+        padding-inline: 20px;
+
+        .content {
+
+            h2 {
+                font-size: var(--heading-5);
+            }
+
+            p {
+                font-size: var(--base);
+                margin-block: 25px 20px;
+            }
+
+            form {
+                input {
+                    padding: 20px;
+                    border-radius: var(--primary-radius);
+                    font-size: var(--base);
+                    flex-grow: 1;
+                    color: var(--dark-500);
+
+                    &::placeholder {
+                        color: currentColor;
+                    }
+                }
+
+                a {
+                    position: relative;
+                    left: -30px;
+                }
+            }
+        }
+    }
+
+    .separator {
+        border-top: 1px solid var(--light-500);
+        padding-top: 20px;
+        margin-top: 30px;
+
+    }
 
 }
