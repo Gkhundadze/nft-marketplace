@@ -351,7 +351,7 @@ section.trending-collections {
                     }
 
                     a {
-                        padding: 2rem 1rem;
+                        padding: 1.9rem .9rem;
                         background-color: var(--cta);
                         color: inherit;
                         font-size: var(--heading-5);
