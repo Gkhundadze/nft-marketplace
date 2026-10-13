@@ -793,5 +793,53 @@ footer {
         margin-top: 30px;
 
     }
+    
+
+}
+
+section.sign-up{
+    gap: 60px;
+    >img{
+
+    }
+    .content{
+        h1{
+            font-size: var(--heading-2);
+            
+
+            
+        }
+        p{
+            margin-block: 20px 40px;
+            max-width: 460px;
+            font-size:var(--heading-5);
+        }
+        form{
+            .input-wrapper{
+                
+                position: relative;
+                &:not(:last-of-type){
+                    margin-bottom: 15px;
+                }
+                &:last-of-type{
+                margin-bottom: 30px;
+                }
+
+               input{
+                padding: 12px 20px 12px 50px;
+                border-radius:var(--primary-radius);
+                border: 1px solid var(--light-500);
+               }
+               svg{
+                position:absolute;
+                left: 20px;
+                top:50%;
+                transform: translateY(-50%);
+                
+               } 
+            }
+        }
+        
+    }
 
 }
