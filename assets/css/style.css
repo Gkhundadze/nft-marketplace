@@ -710,6 +710,9 @@ footer {
                 }
             }
         }
+        & + p{
+            max-width: 238px;
+        }
     }
 
     .logo,
@@ -719,6 +722,7 @@ footer {
 
     p {
         margin-bottom: 20px;
+        
     }
 
     h5 {
@@ -760,8 +764,10 @@ footer {
             }
 
             p {
+                max-width: 330px;
                 font-size: var(--base);
                 margin-block: 25px 20px;
+                
             }
 
             form {
@@ -799,6 +805,7 @@ footer {
 
 section.sign-up{
     gap: 60px;
+    padding-block: 0;
     >img{
 
     }
@@ -815,6 +822,8 @@ section.sign-up{
             font-size:var(--heading-5);
         }
         form{
+            width: 330px;
+
             .input-wrapper{
                 
                 position: relative;
@@ -826,9 +835,15 @@ section.sign-up{
                 }
 
                input{
+                width: 100%;
                 padding: 12px 20px 12px 50px;
                 border-radius:var(--primary-radius);
                 border: 1px solid var(--light-500);
+
+                &::placeholder{
+                    color: var(--dark-500);
+                }
+
                }
                svg{
                 position:absolute;
@@ -837,6 +852,14 @@ section.sign-up{
                 transform: translateY(-50%);
                 
                } 
+            }
+            button[type="submit"]{
+                width: 100%;
+                padding-block: 12px;
+                background-color: var(--cta);
+                border-radius: var(--primary-radius);
+                color: var(--light-300);
+                border: none;
             }
         }
         
