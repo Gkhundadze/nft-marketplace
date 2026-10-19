@@ -1042,7 +1042,24 @@ section.sign-up {
 
 }
 
+@media (max-width: 935px){
+
+section.auction{
+
+    .content-wrapper{
+
+        h2{
+            font-size: var(--heading-3);
+        }
+    }
+
+}
+
+}
+
 @media (max-width: 777px) {
+
+
     section.hero {
         position: relative;
 
@@ -1061,6 +1078,39 @@ section.sign-up {
             }
         }
     }
+
+        section.auction {
+    
+            align-items: center;
+    
+            .container {
+    
+    
+    
+                >div {
+                    flex-direction: column;
+                    align-items: flex-start;
+    
+                    .content-wrapper {
+                        
+    
+                        h2 {
+                            margin-bottom: 200px;
+                        }
+    
+    
+    
+                    }
+    
+                    .countdown-wrapper {
+                        margin-top: -235px;
+                    }
+                }
+            }
+    
+    
+        }
+
 
 }
 
@@ -1155,4 +1205,24 @@ section.sign-up {
 
 
     }
+}
+
+@media (max-width: 480px){
+
+    section.auction{
+
+        .container{
+
+            >div{
+                .content-wrapper{
+                    width: 100%;
+
+                    .btn{
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+
 }
