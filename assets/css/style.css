@@ -882,6 +882,25 @@ section.sign-up {
 }
 
 @media (max-width: 1168px) {
+    section{
+        header{
+            div{
+                h2{
+                    font-size: var(--heading-4);
+                }
+                p{
+                    font-size: var(--base);
+                }
+            }
+        }
+        .wrapper{
+            justify-content: space-evenly;
+            row-gap: 50px;
+        }
+
+
+    }
+
     section.hero {
         >div {
             justify-content: center;
@@ -1043,17 +1062,58 @@ section.sign-up {
 }
 
 @media (max-width: 935px){
-
-section.auction{
-
-    .content-wrapper{
-
-        h2{
-            font-size: var(--heading-3);
+    section{
+        header{
+            div:has(+a.btn){ 
+                p{
+                    max-width: 350px;
+                }
+            }
         }
+         .wrapper{
+            row-gap: 30px;
+        }
+        
+    }
+    section.top-creators{
+        .wrapper{
+          article.author-card{
+            
+            flex-direction: row;
+            width: 330px;
+            gap: 20px;
+            .order{
+                z-index: 1;
+                top: 12px;
+                left: 12px;
+            }
+            img{
+                width: 60px;
+            }
+            >div{
+                
+                flex-grow: 1;
+                h3{
+                    margin-top: 0;
+                }
+            }
+          }  
+
+        }
+
     }
 
-}
+    section.auction{
+
+        .content-wrapper{
+
+            h2{
+                font-size: var(--heading-3);
+            }
+            
+        }
+
+    }
 
 }
 
