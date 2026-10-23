@@ -1004,6 +1004,27 @@ section.sign-up {
 
 
     }
+
+    section.join-digest{
+        /* align-items: unset; */
+        padding-inline: 40px;
+        gap: 50px;
+        >img{
+            width: 370px;
+        }
+        .content{
+            align-self: flex-start;
+            max-width: unset;
+            h2{
+                max-width: 70%;
+                font-size: var(--heading-4);
+            }
+            p{
+                 max-width: 70%;
+                font-size: var(--base);
+            }
+        }
+    }
 }
 
 
@@ -1056,10 +1077,73 @@ section.sign-up {
 
         }
     }
+    section.join-digest {
 
+
+        >img {}
+
+        .content {
+
+            h2 {}
+
+            p {}
+
+            form {
+                gap: 1rem;
+                
+                align-items:stretch;
+                flex-direction: column;
+                input {
+                    padding-block: 12px ;
+                    flex-grow: 1;
+                }
+
+                a {
+                    padding-block: 12px ;
+                    position: static;
+                    justify-content: center;
+                }
+            }
+        }
+    }
 
 
 }
+@media (max-width: 955px){
+      section.join-digest {
+        padding: 40px 30px;
+        gap: 30px;
+
+        >img {
+            max-width: 300px;
+        }
+
+        .content {
+
+            h2 {
+
+            }
+
+            p {
+
+            }
+
+            form {
+                
+                input {
+                   
+                }
+
+                a {
+                  
+                }
+            }
+        }
+    }
+
+
+}
+
 
 @media (max-width: 935px){
     section{
@@ -1113,6 +1197,36 @@ section.sign-up {
             
         }
 
+    }
+    section.join-digest {
+        padding: 40px 30px;
+        gap: 30px;
+
+        >img {
+            max-width: 300px;
+        }
+
+        .content {
+
+            h2 {
+
+            }
+
+            p {
+
+            }
+
+            form {
+                
+                input {
+                   
+                }
+
+                a {
+                  
+                }
+            }
+        }
     }
 
 }
