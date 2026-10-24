@@ -1109,42 +1109,9 @@ section.sign-up {
 
 
 }
-@media (max-width: 955px){
-      section.join-digest {
-        padding: 40px 30px;
-        gap: 30px;
-
-        >img {
-            max-width: 300px;
-        }
-
-        .content {
-
-            h2 {
-
-            }
-
-            p {
-
-            }
-
-            form {
-                
-                input {
-                   
-                }
-
-                a {
-                  
-                }
-            }
-        }
-    }
 
 
-}
-
-
+       
 @media (max-width: 935px){
     section{
         header{
@@ -1284,7 +1251,17 @@ section.sign-up {
     
     
         }
-
+    section.join-digest{
+       flex-direction: column;
+       .content{
+        align-self: center;
+        text-align: center;
+        h2,p{
+            max-width: unset;
+            
+        }
+       } 
+    }
 
 }
 

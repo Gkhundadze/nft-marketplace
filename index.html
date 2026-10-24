@@ -610,8 +610,15 @@
                     </article>
                 </div>
             </section>
-            <section class="join-digest d-flex align-center ">
-                <img src="assets/images/astronaut.svg" alt="astrouanut-image">
+            <section class="join-digest d-flex align-center">
+                <picture>
+                    <!-- Mobile: tall portrait crop -->
+                    <source media="(max-width: 600px)" srcset="assets/images/astronaut-mobile.png">
+                    <!-- Tablet: square crop -->
+                    <source media="(max-width: 935px)" srcset="assets/images/astronaut-tablet.png">
+                    <!-- Desktop: full landscape -->
+                    <img src="assets/images/astronaut.svg" alt="astronaut picture" width="" height="">
+                </picture>
                 <div class="content">
                     <h2 class="bold-600 lh-120 capitalize">Join our weekly digest</h2>
                     <p class="lh-160 capitalize">Get exclusive promotions & updates straight to your inbox.</p>
