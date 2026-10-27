@@ -2,6 +2,11 @@
     font-family: 'worksans';
     src: url(../fonts/WorkSans-SemiBold.ttf);
 }
+@font-face {
+    font-family: 'worksans-regular';
+    src: url(../fonts/WorkSans-Regular.ttf);
+}
+
 
 :root {
     /* typography */
@@ -27,6 +32,9 @@
 body {
     background-color: var(--dark-500);
     font-family: 'worksans';
+    p{
+        font-family: "worksans-regular";
+    }
 }
 
 
@@ -36,6 +44,15 @@ body {
     max-width: 1050px;
     margin: 0 auto;
     width: 90%;
+
+    @media (max-width:836px){ 
+        width: 83%;
+    }
+
+    @media (max-width:600px){ 
+        width: 84%;
+    }
+   
 }
 
 .bold-700 {
@@ -1302,13 +1319,18 @@ section.sign-up {
         .wrapper{
             article{
                 display: grid;
-                grid-template-columns: 84px 1fr;
+                grid-template-columns: 100px 1fr;
                 width: 315px;
                 column-gap: 20px;
                 text-align: start;
+                padding: 20px;
+                
                 img{
                     grid-row: span 2;
                     align-self: center;
+                }
+                h3{
+                    margin-top: 0;
                 }
 
                 p{
@@ -1437,6 +1459,25 @@ section.sign-up {
 
         .content{
             text-align: start;
+        }
+    }
+
+}
+@media (max-width: 360px){
+    section.how-it-works{
+        .wrapper{
+            article{
+                grid-template-columns: 1fr;
+                text-align: center;
+                img{
+                    max-width: 75%;
+                    grid-row: unset;
+                    margin-inline: auto;
+                }
+                p{
+                    grid-column: unset;
+                }
+            }
         }
     }
 
