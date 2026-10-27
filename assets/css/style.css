@@ -1117,7 +1117,8 @@ section.sign-up {
             }
 
             .preview {
-                width: 330px;
+                max-width: 330px;
+                width: 96%;
             }
 
         }
@@ -1257,7 +1258,7 @@ section.sign-up {
 
             .content {
                 >p {
-                    margin-bottom: 440px;
+                    margin-bottom: 460px;
                 }
             }
 
@@ -1433,9 +1434,27 @@ section.sign-up {
 
 @media (max-width: 480px){
 
+
     section{
         padding-inline: 0;
         padding-block: 40px;
+    }
+
+    section.hero {
+        
+        >div.d-flex {
+
+            .content {
+                
+                >h1{
+                    margin-bottom: 20px;
+                }
+
+            }
+            .preview {
+                top: 310px;
+            }
+        }
     }
 
     section.auction{
@@ -1463,7 +1482,23 @@ section.sign-up {
     }
 
 }
-@media (max-width: 360px){
+@media (max-width: 370px){
+
+    section.hero {
+
+        >div.d-flex {
+            & .content {
+                >p {
+                    margin-bottom: 440px;
+                }
+            }
+            .preview {
+                top: 330px;
+            }
+            
+        }
+    }
+
     section.how-it-works{
         .wrapper{
             article{
