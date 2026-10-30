@@ -1440,6 +1440,15 @@ section.sign-up {
         padding-block: 40px;
     }
 
+    header{
+        padding-inline: 30px;
+        .logo{
+            svg{
+                width: 182px;
+            }
+        }
+    }
+
     section.hero {
         
         >div.d-flex {
@@ -1483,6 +1492,7 @@ section.sign-up {
 
 }
 @media (max-width: 370px){
+
 
     section.hero {
 
