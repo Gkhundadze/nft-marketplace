@@ -1160,6 +1160,19 @@ section.sign-up {
 }
 
 @media (max-width: 777px) {
+  section {
+    header {
+      div:has(+ a.btn) {
+        p {
+          max-width: 270px;
+        }
+      }
+    }
+
+    .wrapper {
+      
+    }
+  }
   section.hero {
     position: relative;
 
@@ -1214,7 +1227,31 @@ section.sign-up {
     }
   }
 }
+@media (max-width:650px){
+  section {
+    position: relative;
+    padding-bottom: 185px;
+    
+    header {
+      a.btn{
+        width: 315px;
+        position:absolute;
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      div:has(+ a.btn) {
+        p {
+          max-width: unset;
+        }
+      }
+    }
 
+    .wrapper {
+      row-gap: 30px;
+    }
+  }
+}
 @media (max-width: 600px) {
   section.how-it-works {
     .wrapper {
@@ -1326,8 +1363,13 @@ section.sign-up {
 
 @media (max-width: 480px) {
   section {
+
     padding-inline: 0;
     padding-block: 40px;
+    &:has( a.btn){
+      padding-bottom: 135px;
+      a.btn{bottom: 40px;}
+    }
   }
 
   header {
@@ -1348,6 +1390,7 @@ section.sign-up {
         }
 
         a.btn {
+      
           justify-content: center;
           width: 100%;
         }
