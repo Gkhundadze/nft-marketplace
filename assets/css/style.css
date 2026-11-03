@@ -1298,6 +1298,7 @@ section.sign-up {
   section {
     position: relative;
     padding-bottom: 185px;
+    
 
     header {
       &:has(a.btn) a.btn {
@@ -1308,6 +1309,7 @@ section.sign-up {
         left: 50%;
         transform: translateX(-50%);
       }
+
 
       div:has(+ a.btn) {
         p {
@@ -1320,6 +1322,11 @@ section.sign-up {
       row-gap: 30px;
     }
   }
+  section.sign-up {
+    picture {
+      flex-basis: auto;
+    }
+  }  
 }
 
 @media (max-width: 600px) {
@@ -1524,6 +1531,14 @@ section.sign-up {
 
     .content {
       text-align: start;
+    }
+  }
+    /* Page:Sign-up */
+  section.sign-up {
+
+    .content{
+      --size:84vw;
+      padding-inline: 8vw
     }
   }
 }
