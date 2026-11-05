@@ -221,6 +221,10 @@ section {
   }
 
   .wrapper {
+    a {
+      color: inherit;
+    }
+
     h3 {
       font-size: var(--heading-5);
     }
@@ -238,6 +242,10 @@ section {
 
   &.secondary {
     padding: 20px 50px;
+  }
+
+  &.medium {
+    padding: 20px;
   }
 
   &.nav {
@@ -854,47 +862,142 @@ section.sign-up {
 }
 
 /* page: artist-page */
-section.artist-info{
-    --background-height: 320px;
-    padding-block: 0;
-  .background-overlay{
+section.artist-info {
+  --background-height: 320px;
+  --avatar-size: 120px;
+  --background-offset: calc(var(--avatar-size) / 2);
+  padding-block: 0;
+
+  .background-overlay {
     height: var(--background-height);
-    &::before{
-      content: "";  
+
+    margin-bottom: var(--background-offset);
+
+    &::before {
+      content: "";
       position: absolute;
       z-index: 2;
       height: var(--background-height);
       width: 100%;
       background-image: linear-gradient(to bottom, rgba(151, 71, 255, 0), rgba(151, 71, 255, 1));
     }
-    
-    img{
+
+    img {
       height: 100%;
       width: 100%;
       object-fit: cover;
     }
   }
 
-  .content{
+  .content {
     position: relative;
-    .avatar{
+    padding-block: 40px;
+
+    .avatar {
       position: absolute;
-      top: -60px;
+      top: calc((var(--background-offset) + (var(--avatar-size) / 2)) * -1);
       z-index: 3;
-      width: 120px;
-      img{
+      width: var(--avatar-size);
+      height: var(--avatar-size);
+
+      img {
         border-radius: var(--primary-radius);
         border: 2px solid rgba(43, 43, 43, 1);
         width: 100%;
       }
     }
-  }
-  @media(max-width: 935px){
-    --background-height: 280px;
+
+    header {
+      margin-bottom: 30px;
+
+      h1 {
+        font-size: var(--heading-2);
+      }
+
+      .ctas {
+        gap: 20px;
+
+        a.btn {
+          position: static;
+          transform: translateX(0);
+          width: unset;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+
+    .statistics-wrapper {
+      gap: 20px;
+
+      li {
+        flex-basis: 156px;
+
+        p {
+          &:first-child {
+            font-size: var(--heading-5);
+          }
+
+          &:last-child {
+            font-size: var(--base);
+          }
+        }
+      }
+    }
   }
 
-    @media(max-width: 480px){
+  @media(max-width: 935px) {
+    --background-height: 280px;
+
+    .content {
+      padding-block: 30px;
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+      }
+    }
+  }
+
+  @media(max-width: 480px) {
     --background-height: 250px;
+
+    .content {
+
+
+      header {
+        align-items: stretch;
+
+        .ctas {
+          flex-direction: column;
+
+          a.btn {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 360px) {
+    .content {
+
+
+      header {
+
+        .ctas {
+
+          a.btn {}
+        }
+      }
+
+      .statistics-wrapper {
+        gap: 12px;
+      }
+    }
   }
 }
 
@@ -1343,7 +1446,7 @@ section.artist-info{
   section {
     position: relative;
     padding-bottom: 185px;
-    
+
 
     header {
       &:has(a.btn) a.btn {
@@ -1367,11 +1470,12 @@ section.artist-info{
       row-gap: 30px;
     }
   }
+
   section.sign-up {
     picture {
       flex-basis: auto;
     }
-  }  
+  }
 }
 
 @media (max-width: 600px) {
@@ -1578,11 +1682,12 @@ section.artist-info{
       text-align: start;
     }
   }
-    /* Page:Sign-up */
+
+  /* Page:Sign-up */
   section.sign-up {
 
-    .content{
-      --size:84vw;
+    .content {
+      --size: 84vw;
       padding-inline: 8vw
     }
   }
