@@ -892,6 +892,7 @@ section.artist-info {
   .content {
     position: relative;
     padding-block: 40px;
+    border-bottom: 1px solid var(--dark-300);
 
     .avatar {
       position: absolute;
@@ -946,6 +947,28 @@ section.artist-info {
         }
       }
     }
+
+    h4{
+      font-size: var(--heading-5);
+      color: var(--light-500);
+      margin-block: 30px 10px;
+    }
+
+    h4 + p{
+      font-size: var(--heading-5);
+    }
+    
+    .socials-wrapper{
+      gap: 10px;
+
+      a {
+
+        &:hover {
+          animation: icon-spin 0.7s ease-in-out;
+        }
+      }
+    }
+
   }
 
   @media(max-width: 935px) {
@@ -959,6 +982,18 @@ section.artist-info {
         align-items: flex-start;
         gap: 30px;
       }
+
+      h4{
+      font-size: var(--base);
+      line-height: 140%;
+      font-weight: 400;
+      }
+
+      h4 + p{
+        font-size: var(--base);
+        line-height: 140%;
+      }
+      
     }
   }
 
