@@ -971,6 +971,7 @@ section.artist-info {
 
   }
 
+
   @media(max-width: 935px) {
     --background-height: 280px;
 
@@ -999,6 +1000,10 @@ section.artist-info {
 
   @media(max-width: 480px) {
     --background-height: 250px;
+
+    &:has(header a.btn){
+      padding-bottom: 0;
+    }
 
     .content {
 
@@ -1035,6 +1040,75 @@ section.artist-info {
     }
   }
 }
+
+section.artist-works{
+  padding-block: 0;
+  nav{
+    --default-color: var(--light-500);
+    --active-color: var(--light-300);
+    ul{
+      li{
+        flex-basis: 33%;
+        
+        a{
+          color: var(--default-color);
+          gap: 1rem;
+          padding-block: 14px;
+          font-size: var(--heading-5);
+
+          span{
+            background-color: var(--dark-300);
+            color: var(--light-300);
+            padding: 5px 10px;
+            border-radius: var(--primary-radius);
+            font-size: var(--base);
+          }
+        }
+
+        &.active{
+           a{
+            color: var(--active-color);
+            border-bottom: 2px solid var(--default-color);
+
+            span{
+            background-color: var(--light-500);
+            }
+          }
+        }
+      }
+    }
+  }
+
+   @media(max-width: 935px){
+    nav{
+      ul{
+        li{
+          a{
+            font-size: var(--base);
+            padding-block: 18px;
+          }
+        }
+      }
+    }
+   }
+   @media(max-width: 480px){
+    nav{
+      ul{
+        li{
+          a{
+            span{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+   }
+}
+
+
+
+/* media queries */
 
 @media (max-width: 1185px) {
   section {
