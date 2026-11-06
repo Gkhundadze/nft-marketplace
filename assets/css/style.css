@@ -862,6 +862,13 @@ section.sign-up {
 }
 
 /* page: artist-page */
+body[page="artist-page"] {
+  footer {
+    margin-top: 0;
+    border-top: 2px solid var(--dark-500);
+  }
+}
+
 section.artist-info {
   --background-height: 320px;
   --avatar-size: 120px;
@@ -948,17 +955,17 @@ section.artist-info {
       }
     }
 
-    h4{
+    h4 {
       font-size: var(--heading-5);
       color: var(--light-500);
       margin-block: 30px 10px;
     }
 
-    h4 + p{
+    h4+p {
       font-size: var(--heading-5);
     }
-    
-    .socials-wrapper{
+
+    .socials-wrapper {
       gap: 10px;
 
       a {
@@ -984,24 +991,24 @@ section.artist-info {
         gap: 30px;
       }
 
-      h4{
-      font-size: var(--base);
-      line-height: 140%;
-      font-weight: 400;
+      h4 {
+        font-size: var(--base);
+        line-height: 140%;
+        font-weight: 400;
       }
 
-      h4 + p{
+      h4+p {
         font-size: var(--base);
         line-height: 140%;
       }
-      
+
     }
   }
 
   @media(max-width: 480px) {
     --background-height: 250px;
 
-    &:has(header a.btn){
+    &:has(header a.btn) {
       padding-bottom: 0;
     }
 
@@ -1041,22 +1048,26 @@ section.artist-info {
   }
 }
 
-section.artist-works{
+section.artist-works {
   padding-block: 0;
-  nav{
+  background-color: var(--dark-300);
+
+  nav {
     --default-color: var(--light-500);
     --active-color: var(--light-300);
-    ul{
-      li{
+    background-color: var(--dark-500);
+
+    ul {
+      li {
         flex-basis: 33%;
-        
-        a{
+
+        a {
           color: var(--default-color);
           gap: 1rem;
           padding-block: 14px;
           font-size: var(--heading-5);
 
-          span{
+          span {
             background-color: var(--dark-300);
             color: var(--light-300);
             padding: 5px 10px;
@@ -1065,13 +1076,13 @@ section.artist-works{
           }
         }
 
-        &.active{
-           a{
+        &.active {
+          a {
             color: var(--active-color);
             border-bottom: 2px solid var(--default-color);
 
-            span{
-            background-color: var(--light-500);
+            span {
+              background-color: var(--light-500);
             }
           }
         }
@@ -1079,31 +1090,75 @@ section.artist-works{
     }
   }
 
-   @media(max-width: 935px){
-    nav{
-      ul{
-        li{
-          a{
+  .wrapper {
+    padding-block: 80px;
+
+    .nft-card {
+
+      max-width: 330px;
+      background-color: var(--dark-500);
+      border-radius: var(--primary-radius);
+      /* border-top-right-radius: var(--primary-radius); */
+
+      .preview {
+        img {
+          width: 100%;
+        }
+      }
+
+      .footer {
+        padding: 25px 30px;
+
+        h3 {
+          margin-bottom: 5px;
+        }
+
+        .author-wrapper {
+          margin-bottom: 25px;
+          gap: 12px;
+        }
+
+        .price-wrapper {
+          >div {
+            p {
+              &:first-of-type {
+                color: var(--light-500);
+                margin-bottom: 0.5rem;
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media(max-width: 935px) {
+    nav {
+      ul {
+        li {
+          a {
             font-size: var(--base);
             padding-block: 18px;
           }
         }
       }
     }
-   }
-   @media(max-width: 480px){
-    nav{
-      ul{
-        li{
-          a{
-            span{
+  }
+
+  @media(max-width: 480px) {
+    nav {
+      ul {
+        li {
+          a {
+            span {
               display: none;
             }
           }
         }
       }
     }
-   }
+  }
 }
 
 
