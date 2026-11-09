@@ -861,6 +861,8 @@ section.sign-up {
   }
 }
 
+
+
 /* page: artist-page */
 body[page="artist-page"] {
   footer {
@@ -868,6 +870,7 @@ body[page="artist-page"] {
     border-top: 2px solid var(--dark-500);
   }
 }
+
 
 section.artist-info {
   --background-height: 320px;
@@ -1165,7 +1168,20 @@ section.artist-works {
   }
 }
 
+/* page: nft-page */
+body[page="nft-page"]{
+  footer{
+    margin-top: 0;
+  }
+  
+}
 
+section.nft-info{
+  padding-block: 0;
+  img{
+    width: 100%;  
+  }
+}
 
 /* media queries */
 
