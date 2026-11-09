@@ -1014,8 +1014,12 @@ section.artist-info {
 
     .content {
 
+      .avatar{
+        left: 50%; 
+        transform: translateX(-50%);
+      }
 
-      header {
+      header  {
         align-items: stretch;
 
         .ctas {
