@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,9 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>nftpage</title>
 </head>
-<body page = "nft-page">
-        <header class="d-flex justify-between align-center">
+
+<body page="nft-page">
+    <header class="d-flex justify-between align-center">
 
         <a href="index.html" class="logo">
             <svg xmlns="http://www.w3.org/2000/svg" width="244" height="32" viewBox="0 0 244 32" fill="none">
@@ -107,17 +109,88 @@
 
     <main>
         <section class="nft-info">
-            <div>
-                <picture>
-                    <!-- Mobile: tall portrait crop -->
-                    <source media="(max-width: 375px)" srcset="assets/images/spaceboy-mobile.png">
-                    <!-- Tablet: square crop -->
-                    <source media="(max-width: 834px)" srcset="assets/images/spaceboy-tablet.png">
-                    <!-- Desktop: full landscape -->
-                    <img src="assets/images/spaceboy.png" alt="astronaut picture" width="" height="">
-                </picture>
-            
+
+            <picture>
+                <!-- Mobile: tall portrait crop -->
+                <source media="(max-width: 375px)" srcset="assets/images/spaceboy-mobile.png">
+                <!-- Tablet: square crop -->
+                <source media="(max-width: 834px)" srcset="assets/images/spaceboy-tablet.png">
+                <!-- Desktop: full landscape -->
+                <img src="assets/images/spaceboy.png" alt="astronaut picture" width="" height="">
+            </picture>
+            <div class="container">
+
+                <article>
+                    <div class="d-flex justify-between">
+                        <div>
+                            <h1>
+                                The Orbitians
+                            </h1>
+                            <p>
+                                minted on
+                                <time datetime="sep 30,2022">sep 30,2022
+
+
+                                </time>
+                            </p>
+                            
+                        </div>
+
+                        <div class="countdown-wrapper">
+                            <p>Auction ends in: </p>
+                            <div class="timer d-flex">
+
+                                <div class="hours">
+                                    <p class="bold-700 lh-120">59</p>
+                                    <p class="capitalize lh-110">hours</p>
+                                </div>
+                                <div class="twodots">
+                                    <p class="bold-700 lh-120">:</p>
+                                </div>
+                                <div class="minutes">
+                                    <p class="bold-700 lh-120">59</p>
+                                    <p class="capitalize lh-110">minutes</p>
+                                </div>
+                                <div class="twodots">
+                                    <p class="bold-700 lh-120">:</p>
+                                </div>
+                                <div class="seconds">
+                                    <p class="bold-700 lh-120">59</p>
+                                    <p class="capitalize lh-110">seconds</p>
+                                </div>
+                            </div>
+                            <a href="" class="btn nav d-flex align-center bg-cta justify-center capitalize">place
+                                bid</a>
+
+
+                        </div>
+                    </div>
+                    <p>
+                        created by
+                    </p>
+                    <h2 class="d-flex align-center">
+                        <img src="assets/images/avatar-orbitian.png" alt="orbitian avatar">
+                        Orbitian
+                    </h2>
+                    <p>
+                        description
+                    </p>
+                    
+                <p class="description-text">
+The Orbitians
+is a collection of 10,000 unique NFTs on the Ethereum blockchain,
+
+
+There are all sorts of beings in the NFT Universe. The most advanced and friendly of the bunch are Orbitians.
+
+
+ They live in a metal space machines, high up in the sky and only have one foot on Earth.
+These Orbitians are a peaceful race, but they have been at war with a group of invaders for many generations. The invaders are called Upside-Downs, because of their inverted bodies that live on the ground, yet do not know any other way to be. Upside-Downs believe that they will be able to win this war if they could only get an eye into Orbitian territory, so they've taken to make human beings their target.
+                </p>
+                </article>
             </div>
+
+
         </section>
     </main>
 
@@ -223,6 +296,7 @@
             </div>
         </div>
     </footer>
-    
+
 </body>
+
 </html>
