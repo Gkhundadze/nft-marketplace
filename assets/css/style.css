@@ -241,6 +241,14 @@ section {
   font-size: var(--base);
   transition-duration: 0.3s;
 
+  &.tag{
+    padding: 12px 30px;
+    color: var(--light-300);
+    text-transform: uppercase;
+    background-color: var(--dark-300);
+    
+  }
+
   &.secondary {
     padding: 20px 50px;
   }
@@ -1177,68 +1185,133 @@ body[page="nft-page"]{
   
 }
 
-section.nft-info{
+section.nft-info {
   padding-block: 0;
-  picture{
-    img{
-      width: 100%;  
+
+  picture {
+    img {
+      width: 100%;
     }
 
   }
-    article {
-      .countdown-wrapper {
-        z-index: 2;
-        background-color: rgba(59, 59, 59, 50%);
-        padding: 30px;
-        border-radius: var(--primary-radius);
-  
-        >p {
-          font-size: var(--caption);
-          margin-bottom: 10px;
-        }
-  
-        .timer {
-          gap: 10px;
-  
-          .hours,
-          .minutes,
-          .seconds {
-            p {
-              &:first-child {
-                margin-bottom: 5px;
-                font-size: var(--heading-3);
-              }
-  
-              &:last-child {
-                font-size: var(--caption);
-              }
+
+  article {
+    position: relative;
+    padding-block: 40px;
+
+    h1 {
+      font-size: var(--heading-2);
+    }
+
+    h1+p {
+      color: var(--light-500);
+      font-size: var(--heading-5);
+      margin-top: 10px;
+
+    }
+
+    .countdown-wrapper {
+      position: absolute;
+      right: 0;
+      top: 40px;
+      background-color: rgba(59, 59, 59, 50%);
+      padding: 30px;
+      border-radius: var(--primary-radius);
+
+      >p {
+        font-size: var(--caption);
+        margin-bottom: 10px;
+      }
+
+      .timer {
+        gap: 10px;
+
+        .hours,
+        .minutes,
+        .seconds {
+          p {
+            &:first-child {
+              margin-bottom: 5px;
+              font-size: var(--heading-3);
+            }
+
+            &:last-child {
+              font-size: var(--caption);
             }
           }
-  
-          .twodots {
-            font-size: var(--heading-3);
-          }
         }
-  
-        a.btn {
-  
-          margin-top: 30px;
+
+        .twodots {
+          font-size: var(--heading-3);
         }
       }
-      h2{
-        gap: 12px;
+
+      a.btn {
+
+        margin-top: 30px;
+      }
+
+    }
+
+    h4 {
+      font-size: var(--heading-5);
+      color: var(--light-500);
+      margin-block: 30px 10px;
+    }
+
+    .details-wrapper {
+      a {
+        color: var(--light-300);
+        gap: 10px;
+        font-size: var(--heading-5);
+
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .tags-wrapper {
+      gap: 20px;
+    }
+
+
+
+
+    h2 {
+
+      font-size: var(--heading-5);
+      gap: 12px;
+    }
+  }
+
+  p.description-text {
+    max-width: 605px;
+    white-space: pre-wrap;
+    font-size: var(--heading-5);
+  }
+
+  @media (max-width: 992px){
+    article{
+
+      h1{ 
+        font-size: var(--heading-3);
+      }
+      /* need fix */
+      h1+p, h2, h4, .details-wrapper a, p:not(:has(.twodots p)){
+        font-size: var(--base);
       }
     }
     p.description-text{
-      max-width: 605px;
-      white-space: pre-wrap;
-      font-size: var(--heading-5);
+      max-width: 365px;
+      font-size: var(--base);
     }
-    }
+  }
+}
   
-    /* media queries */
+/* media queries */
   
-    @media (max-width: 1185px) {
+@media (max-width: 1185px) {
       section {
         header {
           div {
@@ -1414,9 +1487,9 @@ section.nft-info{
           }
         }
       }
-    }
+}
   
-    @media (max-width: 1025px) {
+@media (max-width: 1025px) {
       header {
         .main-navigation {
           ul {
@@ -1473,9 +1546,9 @@ section.nft-info{
           p {}
         }
       }
-    }
+}
   
-    @media (max-width: 935px) {
+@media (max-width: 935px) {
       section {
         header {
           div:has(+ a.btn) {
@@ -1659,6 +1732,7 @@ section.nft-info{
 
         .countdown-wrapper {
           margin-top: -235px;
+          
         }
       }
     }
