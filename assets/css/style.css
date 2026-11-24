@@ -24,6 +24,7 @@
   --dark-300: #3b3b3b;
   --light-500: #858584;
   --light-300: #fff;
+  --caption-lable: #858584;
 
   /*  */
   --primary-radius: 20px;
@@ -78,6 +79,12 @@ body {
   display: inline-flex;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+.justify-evenly {
+  justify-content: space-evenly;
+}
 .justify-between {
   justify-content: space-between;
 }
@@ -170,7 +177,6 @@ header {
 
       li {
         a {
-          display: inline-block;
           color: inherit;
           font-size: var(--base);
           padding: 12px 20px;
@@ -1345,6 +1351,154 @@ section.nft-info {
   }
 }
 
+/* page: rankings */
+body[page="rankings"] {
+  footer {
+    margin-top: 0;
+  }
+}
+section.rankings {
+  header {
+    margin-bottom: 40px;
+    h1{
+      font-size: var(--heading-2);
+      margin-bottom: 20px;
+      @media (max-width: 960px) {
+        font-size: var(--heading-3);
+      }
+      @media (max-width: 660px) {
+        font-size: var(--heading-4);
+      }
+   
+    }
+    p {
+
+    }
+  }
+  .filters-wrapper {
+    margin-bottom: 40px;
+    li {
+      flex-basis: 25%;
+      text-align: center;
+      padding-block: 14px;
+      cursor: pointer;
+      color: var(--caption-lable);
+      font-size: var(--heading-5);
+      @media (max-width: 960px) {
+        font-size: var(--base);
+      }
+      &.active {
+        color: var(--light-300);
+        border-bottom: 2px solid var(--caption-lable) ;
+      }
+    }
+  }
+  table {
+    --cell-py: 12px;
+    --cell-px: 20px;
+    --avatar-size: 60px; 
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 20px;
+    thead {
+      tr {
+         color: var(--caption-lable);
+        th {
+          border-top: 1px solid var(--dark-300);
+          border-bottom: 1px solid var(--dark-300);
+          
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          background-color: var(--dark-300);
+          vertical-align: middle;
+          .artist-info {
+            gap: 20px;
+            img {
+              width: var(--avatar-size);
+              display: block;
+              @media (max-width: 960px) {
+                --avatar-size: 24px;
+              }
+            }
+            h3 {
+              font-size: var(--heading-5);
+              /* font-size: clamp(1rem, var(--heading-5), 2rem); */
+              @media (max-width: 660px) {
+                font-size: var(--base);
+              }
+            }
+          }
+          &:first-child {
+            div {
+              height: 30px;
+              width: 30px;
+              background-color: var(--dark-500);
+              border-radius: 50%;
+              color: var(--caption-lable);
+              @media (max-width: 960px) {
+                background-color: transparent;
+
+              }
+            }
+            @media(max-width: 440px) {
+              padding-right: 0;
+            }
+          }
+          &:nth-child(2){
+            @media(max-width: 440px) {
+              padding-left: 0;
+            }
+          }
+          &:last-child {
+            white-space: nowrap;
+            @media (max-width: 769px) {
+              padding-right: 20px;
+            }
+          }
+          &.change {
+            color: #00AC4F;
+          }
+        }
+      }
+    }
+    th, td {
+      &:nth-child(4) {
+        @media (max-width: 960px) {
+          display: none;
+        }
+      }
+      &:nth-child(3) {
+        /* @media (max-width: 960px) {
+          display: none;
+        } */
+        @media (max-width: 769px) {
+          display: none;
+        }
+      }
+    }
+    thead th,
+    tbody td {
+      padding: var(--cell-py) var(--cell-px);
+      @media (max-width: 769px) {
+        --cell-px: 10px;
+      }
+
+      &:first-child {
+        border-radius: var(--primary-radius) 0 0 var(--primary-radius);
+      }
+
+      &:last-child {
+        border-radius: 0 var(--primary-radius) var(--primary-radius) 0;
+
+      }
+    }
+  }
+}
 /* media queries */
 
 @media (max-width: 1185px) {
